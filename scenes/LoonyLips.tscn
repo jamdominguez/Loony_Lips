@@ -22,13 +22,12 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 1
 
-[node name="Story" type="RichTextLabel" parent="Blackboard"]
+[node name="StoryText" type="RichTextLabel" parent="Blackboard"]
 margin_left = 24.2363
 margin_top = 6.91663
 margin_right = 999.236
 margin_bottom = 507.917
 custom_fonts/normal_font = SubResource( 1 )
-text = "StoryText"
 
 [node name="TextBox" type="LineEdit" parent="Blackboard"]
 margin_left = 28.7633
@@ -36,7 +35,6 @@ margin_top = 516.524
 margin_right = 765.763
 margin_bottom = 570.524
 custom_fonts/font = SubResource( 1 )
-text = "TextBox"
 
 [node name="TextureButton" type="TextureButton" parent="Blackboard"]
 margin_left = 805.014
