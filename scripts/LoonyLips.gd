@@ -1,18 +1,37 @@
 extends Node2D
 
-var story = "Today %s going to buy a new %s. It is so %s"	
-var prompt_words = ["a name", "a thing", "a feeling"]
+var template = [
+		{
+			"story" : "Today %s going to buy a new %s. It is so %s",
+			"prompt" : ["a name", "a thing", "a feeling"]
+		},
+		{
+			"story" : "A new enemy has arrived to %s. He is the most %s monster in the universe. Use the great %s to defeat him!",
+			"prompt" : ["a place", "a adjective", "a object"]
+		},
+		{
+			"story" : "The last %s match in this sesson is %s. I will %s while arrive it.",
+			"prompt" : ["a sport", "a time", "a action"]
+		}
+	]
+var current_story
 var player_words = []
 
 #Called when node is created
 func _ready():
+	current_story = get_random_story()
 	$Blackboard/StoryText.bbcode_text = "Welcome to Loony Lips!!\n\n"
-	$Blackboard/StoryText.bbcode_text += "Can I have " + prompt_words[player_words.size()] + ", please?"
+	$Blackboard/StoryText.bbcode_text += "Can I have " + current_story.prompt[player_words.size()] + ", please?"
 	$Blackboard/TextBox.clear()
+
+func get_random_story():
+	randomize() #create a new random seed
+	var random_number = randi() % template.size()
+	return template[random_number]
 
 #Called when press ENTER on TextBox
 func _on_TextBox_text_entered(new_text):
-	player_words.append(new_text);	
+	player_words.append(new_text);
 	$Blackboard/TextBox.clear()
 	check_player_words_length()
 
@@ -27,7 +46,7 @@ func _on_TextureButton_pressed():
 
 #Question for the player
 func prompt():
-	$Blackboard/StoryText.text = "Can I have " + prompt_words[player_words.size()] + ", please?"
+	$Blackboard/StoryText.text = "Can I have " + current_story.prompt[player_words.size()] + ", please?"
 
 func check_player_words_length():
 	if is_story_done():
@@ -37,11 +56,11 @@ func check_player_words_length():
 
 #Check if the story is ready to be told
 func is_story_done():
-	return player_words.size() == prompt_words.size()
+	return player_words.size() == current_story.prompt.size()
 
 #Tell the complete story
 func tell_story():
-	$Blackboard/StoryText.text = story % player_words
+	$Blackboard/StoryText.text = current_story.story % player_words
 	end_game()
 
 #Change the elements state
