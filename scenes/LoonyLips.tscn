@@ -37,18 +37,18 @@ margin_bottom = 570.524
 custom_fonts/font = SubResource( 1 )
 
 [node name="TextureButton" type="TextureButton" parent="Blackboard"]
-margin_left = 805.014
-margin_top = 517.677
-margin_right = 854.014
-margin_bottom = 566.677
+margin_left = 803.861
+margin_top = 522.288
+margin_right = 852.861
+margin_bottom = 571.288
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Blackboard/TextureButton"]
-margin_left = 66.9166
-margin_top = -2.30554
-margin_right = 168.917
-margin_bottom = 60.6945
+margin_left = 53.1667
+margin_top = -3.15277
+margin_right = 188.167
+margin_bottom = 59.8472
 custom_fonts/normal_font = SubResource( 1 )
 text = "OK!"
 
