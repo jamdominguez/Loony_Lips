@@ -1,0 +1,18 @@
+[
+		{
+			"story" : "Today %s going to buy a new %s. It is so %s",
+			"prompt" : ["a name", "a thing", "a feeling"]
+		},
+		{
+			"story" : "A new enemy has arrived to %s. He is the most %s monster in the universe. Use the great %s to defeat him!",
+			"prompt" : ["a place", "a adjective", "a object"]
+		},
+		{
+			"story" : "The last %s match in this sesson is at %s. I will %s while arrive it.",
+			"prompt" : ["a sport", "a time", "a action"]
+		},
+    {
+			"story" : "Once upon a time %s girls wating for %s to appear on the stage and start to %s",
+			"prompt" : ["a number", "pop start", "a verb"]
+		}
+]

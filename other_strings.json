@@ -1,0 +1,7 @@
+{
+	"welcome" : "Welcome to Loony Lips!!\n\n",
+	"question" : "Can I have %s, please?",
+	"again" : "Again!",
+	"error_open_file" : "ERROR opening file: %s",
+	"error_reload_scene" : "ERROR reloading the scene"
+}
