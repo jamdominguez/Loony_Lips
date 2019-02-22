@@ -7,7 +7,7 @@ var STRINGS #location STRINGS (constants)
 #Called when node is created
 func _ready():
 	current_story = get_random_story()
-	STRINGS = get_from_json("./other_STRINGS.json")
+	STRINGS = get_from_json("./other_strings.json")
 	$Blackboard/StoryText.bbcode_text = STRINGS.welcome
 	$Blackboard/StoryText.bbcode_text += STRINGS.question % current_story.prompt[player_words.size()]
 	$Blackboard/TextBox.clear()
