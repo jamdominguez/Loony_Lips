@@ -2,5 +2,4 @@
 Loony Lips is a words game. It can build crazy stories with information requested to the player.
 
 **Needs GoDot 3.1**
-
-###  STATUS: COMPLETED
+<br>**Status: Completed**<br>
