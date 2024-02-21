@@ -12,7 +12,7 @@ func _ready():
 	$Blackboard/StoryText.bbcode_text += STRINGS.question % current_story.prompt[player_words.size()]
 	$Blackboard/TextBox.clear()
 
-#Return a ramdon story
+#Return a random story
 func get_random_story():
 	var stories = get_from_json("./stories.json")
 	randomize() #create a new random seed

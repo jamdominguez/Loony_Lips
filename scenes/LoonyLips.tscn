@@ -7,7 +7,6 @@
 [ext_resource path="res://gfx/blue_button12.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-
 size = 35
 font_data = ExtResource( 3 )
 
@@ -51,6 +50,5 @@ margin_right = 188.167
 margin_bottom = 59.8472
 custom_fonts/normal_font = SubResource( 1 )
 text = "OK!"
-
 [connection signal="text_entered" from="Blackboard/TextBox" to="." method="_on_TextBox_text_entered"]
 [connection signal="pressed" from="Blackboard/TextureButton" to="." method="_on_TextureButton_pressed"]
